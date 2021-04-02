@@ -4,6 +4,7 @@ import { render } from 'react-dom';
 import { StyleSheet, Text, View, Image, Button, TouchableOpacity, Alert, SafeAreaView, TextInput } from 'react-native';
 
 //Testing 04/02/2021
+//2:52pm
 
 const currencyPerRupee = {
   DOLLAR: 0.014,
