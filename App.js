@@ -1,10 +1,7 @@
 import { StatusBar } from 'expo-status-bar';
 import React from 'react';
 import { render } from 'react-dom';
-import { StyleSheet, Text, View, Image, Button, TouchableOpacity, Alert, SafeAreaView, TextInput } from 'react-native';
-
-//Testing 04/02/2021
-//2:52pm
+import { StyleSheet, Text, View, Image, Button, TouchableOpacity, Alert, SafeAreaView, TextInput, TouchableWithoutFeedback, Keyboard } from 'react-native';
 
 const currencyPerRupee = {
   DOLLAR: 0.014,
@@ -39,6 +36,7 @@ export default class App extends React.Component {
 
   render() {
     return (
+      <TouchableWithoutFeedback onPress={Keyboard.dismiss}>
       <SafeAreaView style={styles.container}>
         <View style={styles.screenview}>
           <View style={styles.resultContainer}>
@@ -100,10 +98,12 @@ export default class App extends React.Component {
               onPress={ () => this.buttonPressed("BITCOIN")}
               style={styles.converterButton}>
                 <Text style={styles.converterButtonText}>BTC</Text>
+                
               </TouchableOpacity>
             </View>
         </View>
-      </SafeAreaView>      
+      </SafeAreaView>   
+      </TouchableWithoutFeedback>   
     );
   }
 }
